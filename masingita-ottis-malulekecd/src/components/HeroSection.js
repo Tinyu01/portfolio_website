@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Particles from 'react-particles-js';
 
 const HeroSection = () => {
     return (
@@ -9,9 +10,18 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="hero-section bg-gradient-to-r from-blue-800 to-purple-900 text-white text-center py-32"
+            className="hero-section relative bg-gradient-to-r from-blue-800 to-purple-900 text-white text-center py-32"
         >
-            <div className="container mx-auto px-4">
+            <Particles
+                params={{
+                    particles: {
+                        number: { value: 50 },
+                        line_linked: { shadow: { enable: true, color: "#3CA9D1" } },
+                    },
+                }}
+                className="absolute inset-0"
+            />
+            <div className="relative z-10 container mx-auto px-4">
                 <h1 className="text-5xl font-bold mb-4">MASINGITA OTTIS MALULEKE</h1>
                 <p className="text-xl mb-8">Software Engineer | UX Designer | Graphics Designer | Database Administrator | IT Specialist | Project Manager</p>
                 <div className="flex justify-center space-x-4">

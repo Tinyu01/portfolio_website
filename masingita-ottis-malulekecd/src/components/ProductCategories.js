@@ -1,20 +1,19 @@
-// src/components/PortfolioCategories.js
+// src/components/ProductCategories.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PortfolioCategories = () => {
+const ProductCategories = () => {
     const categories = [
-        { id: 1, title: "Software Engineering", link: "/portfolio/software" },
-        { id: 2, title: "UX/Graphic Design", link: "/portfolio/design" },
-        { id: 3, title: "Database Administration", link: "/portfolio/database" },
-        { id: 4, title: "IT Specialist/Project Management", link: "/portfolio/it" },
+        { id: 1, title: "Software Templates", link: "/store/software" },
+        { id: 2, title: "Design Assets", link: "/store/design" },
+        { id: 3, title: "IT Tools", link: "/store/it" },
     ];
 
     return (
-        <div className="portfolio-categories bg-gray-100 py-12">
+        <div className="product-categories bg-gray-100 py-12">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center mb-8">Portfolio</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <h2 className="text-3xl font-bold text-center mb-8">Product Categories</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {categories.map(category => (
                         <Link
                             key={category.id}
@@ -30,4 +29,4 @@ const PortfolioCategories = () => {
     );
 };
 
-export default PortfolioCategories;
+export default ProductCategories;
